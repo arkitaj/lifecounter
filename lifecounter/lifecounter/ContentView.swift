@@ -30,8 +30,7 @@ struct ContentView: View {
                     Button("+") {player1Counter += 1}
                 }
             }
-            
-            
+
             // align player 1 layout w player 2...
             .frame(maxWidth: .infinity)
 
@@ -39,6 +38,8 @@ struct ContentView: View {
             VStack(spacing: 10) {
                 Text("Player 2")
                     .font(.headline)
+                    .padding(.top, 40) // evenly spaced between two players now
+
                     
                 Text("\(player2Counter)")
                     .font(.system(size: 50, weight: .bold))
