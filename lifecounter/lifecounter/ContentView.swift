@@ -31,7 +31,6 @@ struct ContentView: View {
     @State private var nameBeingEdited = ""
     @State private var editingPlayerIndex = 0
     
-    @State private var playerCount = 4
     
     
     var body: some View {
@@ -43,7 +42,6 @@ struct ContentView: View {
                     // add players (2 - 8)
                     Button("Add Player") {
                         players.append(("Player \(players.count + 1)", 20))
-                        playerCount = players.count
                     }
                     .disabled(players.count >= 8 || gameStarted)
                     
